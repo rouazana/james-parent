@@ -22,7 +22,7 @@ git submodule init
 git submodule update
 git submodule foreach git checkout trunk
 git submodule foreach git checkout -b $RESULTING_BRANCH
-git submodule foreach git merge origin/$BRANCH
+git submodule foreach git merge --no-edit origin/$BRANCH
 git checkout trunk
 git checkout -b $RESULTING_BRANCH
 git merge --no-edit origin/$BRANCH
